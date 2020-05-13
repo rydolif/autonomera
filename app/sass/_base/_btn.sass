@@ -3,15 +3,50 @@
 	display: flex
 	justify-content: center
 	align-items: center
-	height: 45px
-	font-size: 18px
-	color: $accent
-	font-weight: 700
-	border-radius: 20px
 	max-width: fit-content
+	min-width: 195px
+	width: 100%
+	height: 55px
+	border: 1px solid $accent
+	border-radius: 55px
+	background-color: $accent
+	font-size: 18px
+	font-weight: 700
+	color: $text
+	white-space: nowrap
+	text-transform: uppercase
+	padding: 0 35px
+
+	+r(1450)
+		min-width: auto
+		padding: 0 15px
+		font-size: 16px
+
+	+r(1200)
+		height: 45px
+		padding: 0 10px
+
+	+r(576)
+		font-size: 14px
+		height: 40px
+
+	+r(480)
+		font-size: 12px
+		padding: 0 5px
 
 	&:hover,
 	&:focus
+		border: none
+		background: #fff
+		color: $accent
 		border: 1px solid $accent
-		background: $accent
-		color: #fff
+
+	&--transparent
+		background-color: transparent
+		border: 1px solid $text
+		text-transform: none
+		font-weight: 500
+
+		&:hover,
+		&:focus
+			border: 1px solid $accent

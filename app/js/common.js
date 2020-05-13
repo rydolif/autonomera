@@ -4,11 +4,11 @@ $(function() {
   $('.modal').popup({transition: 'all 0.3s'});
 
 //------------------------------гамбургер-----------------------------
-  // $('.hamburger').click(function() {
-  //   $(this).toggleClass('hamburger--active');
-  //   $('nav').toggleClass('nav--active');
-  //   $('header').toggleClass('header--menu');
-  // });
+  $('.hamburger').click(function() {
+    $(this).toggleClass('hamburger--active');
+    $('.nav').toggleClass('nav--active');
+    $('body').toggleClass('noscroll');
+  });
 
 //------------------------------------form-------------------------------------------
   // $('input[type="tel"]').mask('+0 (000) 000-00-00');
