@@ -1,6 +1,7 @@
 form
 
 input, textarea, select
+	+transition
 	width: 100%
 	border: 1px solid #ebebeb
 	outline: none
@@ -8,7 +9,12 @@ input, textarea, select
 	// -webkit-appearance: none
 	font-size: 16px
 	box-shadow: 0 0 6px rgba(42, 63, 125, 0.34)
-	
+	background-color: #292929
+	color: $text
+	border-radius: 30px
+	text-align: center
+	font-size: 16px
+
 	&:focus:required:invalid
 		border-color: red
 		outline: none
@@ -22,22 +28,53 @@ input, textarea, select
 		-webkit-appearance: none
 
 	&::placeholder
-		color: #c4c4c4
-		font-size: 12px
+		color: $text
+		font-size: 16px
 		line-height: 50px
+
+textarea
+	resize: none
+	height: 180px !important
+	padding-top: 15px
+
+	+r(1200)
+		height: 140px
+	
+	+r(767)
+		height: 100px
 
 input, select
-	height: 50px
-	line-height: 50px
-	padding: 0 25px
+	height: 55px
+	line-height: 55px
+	padding: 0 15px
+
+	+r(767)
+		height: 45px
+		line-height: 45px
+
+		&::placeholder
+			line-height: 45px
 
 	&::placeholder
-		line-height: 50px
-		font-size: 16px
+		line-height: 55px
+
+
+select
+	text-align-last: center
+
+option
+	text-align-last: center
 
 textarea
 	&::placeholder
 		line-height: 1.4
+
+
+label
+	font-size: 14px
+
+	span
+		color: #5a5a5a
 
 label.error
 	position: absolute

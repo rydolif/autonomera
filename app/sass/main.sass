@@ -309,6 +309,14 @@
 		align-items: center
 		flex-wrap: wrap
 		box-shadow: 0 0 20px 0 rgba(#000, .8)
+		+pseudo
+
+		&::before
+			position: absolute
+			top: 0
+			height: 15px
+			width: 100%
+			background: linear-gradient(rgba(#4b4b4b,1) 0%, rgba(0,0,0,0) 7px)
 
 		+r(992)
 			padding: 20px
@@ -515,6 +523,16 @@
 
 .page
 	padding-top: 135px
+	padding-bottom: 45px
+
+	+r(1200)
+		padding-top: 100px
+
+	+r(992)
+		padding-top: 80px
+
+	+r(576)
+		padding-top: 60px
 
 	&--work
 		&__item
@@ -544,6 +562,9 @@
 					opacity: 1
 
 		&__more
+			display: flex
+			justify-content: center
+			align-items: center
 			font-size: 18px
 			text-transform: uppercase
 
@@ -569,4 +590,106 @@
 
 			b
 				@extend .link
+
+
+	&--nomera
+		background-color: $nomera
+
+		h2
+			font-weight: 400
+			margin-bottom: 30px
+
+		&__list
+			+around
+
+		&__item
+			+transition
+			width: 31%
+			padding: 35px 30px 30px
+			background-color: #444444
+			border-radius: 4px
+			text-align: center
+			line-height: 1
+			font-size: 18px
+			margin-bottom: 40px
+
+			&:hover
+				box-shadow: 0 0 20px 0 rgba(#000, 1)
+
+			+r(1200)
+				padding: 15px
+				margin-bottom: 20px
+
+			+r(992)
+				font-size: 16px
+
+			+r(767)
+				width: 48%
+
+			+r(440)
+				width: 100%
+				max-width: 320px
+
+
+			img
+				max-width: 100%
+				width: 100%
+				margin-bottom: 20px
+
+				+r(1200)
+					margin-bottom: 15px
+
+				+r(992)
+					margin-bottom: 10px
+
+			&_name
+				margin-bottom: 25px
+
+				+r(1200)
+					margin-bottom: 15px
+
+				+r(992)
+					margin-bottom: 10px
+
+			&_price
+				font-size: 36px
+
+				+r(1200)
+					font-size: 30px
+
+				+r(992)
+					font-size: 24px
+
+			&_text
+				margin-bottom: 20px
+
+				+r(1200)
+					margin-bottom: 10px
+
+				+r(992)
+					margin-bottom: 5px
+
+			.btn
+				margin: 0 auto
+
+				+r(992)
+					max-width: 100%
+
+
+.crums
+	display: flex
+	flex-wrap: wrap
+	font-size: 18px
+	padding-bottom: 20px
+
+	+r(992)
+		font-size: 16px
+		padding-bottom: 15px
+	
+	+r(480)
+		font-size: 14px
+		padding-bottom: 10px
+
+	li
+		margin-right: 5px
 
